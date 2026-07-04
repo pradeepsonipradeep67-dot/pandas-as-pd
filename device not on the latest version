@@ -1,0 +1,16 @@
+2. list users whose device is not on the latest version
+import pandas as pd
+
+df = pd.read_csv("data-1781969039494.csv")
+
+latest_versions = df.groupby("platform")["app_version_code"].max()
+
+old_version_users = df[
+    df["app_version_code"] !=
+    df["platform"].map(latest_versions)
+]
+
+print(old_version_users)
+  user not on latest version 
+  . android: 3889
+  . iso: 861
