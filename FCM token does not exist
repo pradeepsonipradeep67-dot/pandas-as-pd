@@ -1,0 +1,7 @@
+3. find users whose FCM token does not exit
+import pandas as pd
+df = pd.read_csv("data-1781969039494.csv")
+missing_fcm = df[df["fcm_token_exists"] == False]
+print(missing_fcm)
+output
+. users without FCM token: 123
