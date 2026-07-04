@@ -9,8 +9,9 @@ old_version_users = df[
     df["app_version_code"] !=
     df["platform"].map(latest_versions)
 ]
-
 print(old_version_users)
-  user not on latest version 
+  user not on latest version
+
+  output
   . android: 3889
   . iso: 861
