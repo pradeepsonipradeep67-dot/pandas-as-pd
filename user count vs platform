@@ -1,0 +1,21 @@
+1. user count vs platform
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data-1781969039494.csv")
+
+user_count = df.groupby("platform")["user"].count()
+
+print(user_count)
+
+user_count.plot(kind="bar")
+plt.title("User Count vs Platform")
+plt.xlabel("Platform")
+plt.ylabel("Number of Users")
+plt.show()
+
+output 
+platform     users
+android      4568
+ios          863
+ 
